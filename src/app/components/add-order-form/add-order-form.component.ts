@@ -14,6 +14,9 @@ export class AddOrderFormComponent {
   formOrder: Order = {} as Order;
 
   emitCreate(){
+    if(this.formOrder.orderAgain == null){
+      this.formOrder.orderAgain = false;
+    }
     let result: Order = {...this.formOrder};
     this.Created.emit(result);
     this.formOrder = {} as Order;

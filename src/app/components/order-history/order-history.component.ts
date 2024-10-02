@@ -11,6 +11,7 @@ import { AddOrderFormComponent } from '../add-order-form/add-order-form.componen
   styleUrl: './order-history.component.css'
 })
 export class OrderHistoryComponent {
+  restaurantFilter = "";
   allOrders: Order[] = [];
   constructor(private restaurantService: RestaurantFavesService){}
 

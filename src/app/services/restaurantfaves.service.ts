@@ -10,7 +10,19 @@ export class RestaurantFavesService {
   url: string = "https://localhost:7090/api/Orders";
   constructor(private http:HttpClient) { }
 
-  getAll():Observable<Order[]>{
+  getAll(restaurant?:string, orderAgain?:boolean):Observable<Order[]>{
+    if(restaurant != undefined && orderAgain != undefined)
+      {
+        return this.http.get<Order[]>(this.url + `?restaurant=${restaurant}&orderAgain=${orderAgain}`);
+      }
+    else if(restaurant == undefined && orderAgain != undefined)
+      {
+        return this.http.get<Order[]>(this.url + `?orderAgain=${orderAgain}`);
+      }
+    else if(restaurant != undefined && orderAgain == undefined)
+      {
+        return this.http.get<Order[]>(this.url + `?restaurant=${restaurant}`);
+      }
     return this.http.get<Order[]>(this.url);
   }
 

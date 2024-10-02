@@ -13,3 +13,28 @@
     font-weight: 600;
     font-style: bold;
 }
+h1{
+  text-align: center;
+  color: #03324c;
+}
+button{
+  background-color: #03324c;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  border-radius: 30px;
+  transition-duration: 0.4s;
+}
+button:hover{
+  background-color: #ef6738;
+}
+
+th, td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  color: #03324c;
+}
+

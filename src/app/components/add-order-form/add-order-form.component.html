@@ -1,10 +1,12 @@
 <div class="card">
-<h1 class="poppins-bold">Add an Order</h1>
-<h3 class="poppins">Order: </h3>
-    <input type="text" [(ngModel)]="formOrder.description"/>
-<p class="poppins">Restaurant: </p>
-<input type="text" [(ngModel)]="formOrder.restaurant" />
-<p class="poppins">Rating (1-5): <input type="number" max="5" min="0" [(ngModel)]="formOrder.rating"></p>
-<p class="poppins">Order Again? <input type="checkbox" [(ngModel)]="formOrder.orderAgain"></p>
-<button class="button poppins" (click)="emitCreate()">Submit</button>
+    <div class="form">
+        <div class="header"><h1 class="poppins-bold">Add an Order</h1></div>
+        <p class="poppins">Order: </p>
+        <input type="text" [(ngModel)]="formOrder.description"/>
+        <p class="poppins">Restaurant: </p>
+        <input type="text" [(ngModel)]="formOrder.restaurant" />
+        <p class="poppins">Rating (1-5): <input type="number" max="5" min="0" [(ngModel)]="formOrder.rating"></p>
+        <p class="poppins">Order Again? <input type="checkbox" [(ngModel)]="formOrder.orderAgain"></p>
+        <button class="button poppins" (click)="emitCreate()">Submit</button>
+    </div>
 </div>
