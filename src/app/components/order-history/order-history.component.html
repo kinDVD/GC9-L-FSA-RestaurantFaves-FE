@@ -1,0 +1,21 @@
+<h1 class="poppins-bold">Restaurant Faves</h1>
+<table>
+    <th class="poppins-italic">Description</th>
+    <th class="poppins-italic">Restaurant</th>
+    <th class="poppins-italic">Rating</th>
+    <th class="poppins-italic">Order Again?</th>
+@for(o of allOrders; track o.id){
+    <tr>
+        <td class="poppins-thin">{{o.description}}</td>
+        <td class="poppins-thin">{{o.restaurant}}</td>
+        <td class="poppins-thin">{{o.rating}}/5</td>
+        <td class="poppins-thin">@if(o.orderAgain == true)
+            {
+                ✓
+            }
+        </td>
+        <button class="poppins-thin" (click)="callApiDeleteOrder(o)"><i class="fa-solid fa-trash-can"></i></button>
+    </tr>
+}
+</table>
+<app-add-order-form (Created)="callApiAddOrder($event)"></app-add-order-form>

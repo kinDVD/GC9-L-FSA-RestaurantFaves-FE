@@ -1,0 +1,15 @@
+.poppins-thin {
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .poppins-italic {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: italic;
+}
+.poppins-bold {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-style: bold;
+}

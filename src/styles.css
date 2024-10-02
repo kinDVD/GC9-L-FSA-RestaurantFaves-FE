@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/Poppins-regular.ttf') format('woff2'),
+         url('assets/Poppins-Regular.ttf') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('assets/Poppins-Italic.ttf') format('woff2'),
+         url('assets/Poppins-Italic.ttf') format('woff');
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('assets/Poppins-Bold.ttf') format('woff2'),
+         url('assets/Poppins-Bold.ttf') format('woff');
+    font-weight: 900;
+    font-style: bold;
+  }
